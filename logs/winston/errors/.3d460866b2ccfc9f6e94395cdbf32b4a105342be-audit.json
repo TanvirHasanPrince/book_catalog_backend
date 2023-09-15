@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "D:\\Programming Hero - Level 2\\Assignments\\Assignment 8\\Book Catalog Backend\\book-catalog-backend\\logs\\winston\\errors\\.3d460866b2ccfc9f6e94395cdbf32b4a105342be-audit.json",
+    "files": [
+        {
+            "date": 1694769209835,
+            "name": "D:\\Programming Hero - Level 2\\Assignments\\Assignment 8\\Book Catalog Backend\\book-catalog-backend\\logs\\winston\\errors\\phu-2023-15-09-15-error.log",
+            "hash": "baf6567ee8ccec6fe97a8e96fad9582eb8565f891fcaf4cad0aa29716917bd4a"
+        }
+    ],
+    "hashType": "sha256"
+}
