@@ -33,7 +33,22 @@ const getSingleUserByIDFromDB = catchAsync(
   }
 );
 
+const updateSingleUserByIDFromDB = catchAsync(
+  async (req: Request, res: Response) => {
+    const { id } = req.params;
+    const payload = req.body;
+    const result = await UserService.updateSingleUserByIDFromDB(id, payload);
+    sendResponse(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      message: 'User updated successfully',
+      data: result,
+    });
+  }
+);
+
 export const UserController = {
   getAllFromDB,
   getSingleUserByIDFromDB,
+  updateSingleUserByIDFromDB,
 };
