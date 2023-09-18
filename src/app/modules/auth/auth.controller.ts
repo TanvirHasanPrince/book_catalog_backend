@@ -40,7 +40,13 @@ const loginUser = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+// const checkMyAuth = catchAsync(async (req: Request, res: Response) => {
+//   const user = (req as any).user;
+//  console.log(user);
+// });
+
 export const UserController = {
   insertIntoDB,
   loginUser,
+  // checkMyAuth,
 };
