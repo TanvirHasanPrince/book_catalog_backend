@@ -1,10 +1,10 @@
-import { Request, Response } from "express";
-import catchAsync from "../../../shared/catchAsync";
-import pick from "../../../shared/pick";
-import { userFilterableFields } from "./user.constants";
-import { UserService } from "./user.service";
-import sendResponse from "../../../shared/sendResponse";
-import httpStatus from "http-status";
+import { Request, Response } from 'express';
+import httpStatus from 'http-status';
+import catchAsync from '../../../shared/catchAsync';
+import pick from '../../../shared/pick';
+import sendResponse from '../../../shared/sendResponse';
+import { userFilterableFields } from './user.constants';
+import { UserService } from './user.service';
 
 const getAllFromDB = catchAsync(async (req: Request, res: Response) => {
   const filters = pick(req.query, userFilterableFields);
@@ -19,6 +19,21 @@ const getAllFromDB = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const getSingleUserByIDFromDB = catchAsync(
+  async (req: Request, res: Response) => {
+    const { id } = req.params;
+    const result = await UserService.getSingleUserByIDFromDB(id);
+
+    sendResponse(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      message: 'User fetched successfully',
+      data: result,
+    });
+  }
+);
+
 export const UserController = {
   getAllFromDB,
+  getSingleUserByIDFromDB,
 };

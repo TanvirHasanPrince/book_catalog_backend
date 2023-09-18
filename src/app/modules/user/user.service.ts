@@ -78,6 +78,28 @@ const getAllFromDB = async (
   };
 };
 
+
+const getSingleUserByIDFromDB = async (id: string):Promise<Partial<User> | null> => {
+  const result = await prisma.user.findUnique({
+    where: {
+      id,
+    },
+    select: {
+      id: true,
+      name: true,
+      email: true,
+      role: true,
+      contactNo: true,
+      address: true,
+      profileImg: true,
+      reviewAndRatings: true,
+      orders: true,
+    },
+  });
+  return result;
+};
+
 export const UserService = {
   getAllFromDB,
+  getSingleUserByIDFromDB,
 };
