@@ -14,6 +14,11 @@
             "date": 1694772087226,
             "name": "D:\\Programming Hero - Level 2\\Assignments\\Assignment 8\\Book Catalog Backend\\book-catalog-backend\\logs\\winston\\errors\\phu-2023-15-09-16-error.log",
             "hash": "a7173c01ed2dcfa6cbe797120cd33b187fcc1f0a4889aefef8642c5840434661"
+        },
+        {
+            "date": 1695021327173,
+            "name": "D:\\Programming Hero - Level 2\\Assignments\\Assignment 8\\Book Catalog Backend\\book-catalog-backend\\logs\\winston\\errors\\phu-2023-18-09-13-error.log",
+            "hash": "4388ad727400883d420afff2f928ceb743b29c20ebedd97f80b3e4475ca60cdd"
         }
     ],
     "hashType": "sha256"
