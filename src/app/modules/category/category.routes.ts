@@ -16,5 +16,8 @@ router.patch(
   auth(ENUM_USER_ROLE.ADMIN),
   CategoryController.updateByIDFromDB
 );
-
+router.delete(
+  '/:id',auth(ENUM_USER_ROLE.ADMIN),
+  CategoryController.deleteByIDFromDB
+);
 export const categoryRoutes = router;
