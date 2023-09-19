@@ -92,8 +92,24 @@ const getAllFromDB = async (
   };
 };
 
+// Get Books By CategoryId
+const getBooksByCategoryIdFromDB = async (id: string): Promise<Book[] | null> => {
+  const result = await prisma.book.findMany({
+    where: {
+      categoryId: id,
+    },
+    include: {
+      reviewAndRatings: true,
+      orderedBooks: true,
+    },
+  });
+  return result;
+};
+
+
 
 export const BookService = {
   insertIntoDB,
   getAllFromDB,
+  getBooksByCategoryIdFromDB,
 };
