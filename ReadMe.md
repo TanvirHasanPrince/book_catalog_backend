@@ -152,5 +152,5 @@
 - Get Order by ID
   - Endpoint: `api/v1/orders/:orderId` (GET)
 
-#### Test APIs: [Link Text](https://book-catalog-backend-tau.vercel.app/)
+#### Test APIs: [You can test out the APIs here](https://book-catalog-backend-tau.vercel.app/)
 
