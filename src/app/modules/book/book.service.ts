@@ -64,7 +64,7 @@ const getAllFromDB = async (
   const result = await prisma.book.findMany({
     include: {
       reviewAndRatings: true,
-      orderedBooks: true,
+      // orderedBooks: true,
     },
     where: whereConditions,
     skip,
@@ -113,7 +113,7 @@ const getBooksByCategoryIdFromDB = async (
     take: size,
     include: {
       reviewAndRatings: true,
-      orderedBooks: true,
+      // orderedBooks: true,
     },
   });
 
@@ -138,7 +138,7 @@ const getByIdFromDB = async (id: string): Promise<Book | null> => {
     },
     include: {
       reviewAndRatings: true,
-      orderedBooks: true,
+      // orderedBooks: true,
     },
   });
   return result;
@@ -157,7 +157,7 @@ const updateByIDFromDB = async (
     data: payload,
     include: {
       reviewAndRatings: true,
-      orderedBooks: true,
+      // orderedBooks: true,
     },
   });
   return result;
