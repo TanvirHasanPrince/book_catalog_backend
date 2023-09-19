@@ -7,7 +7,9 @@ const router = express.Router()
 
 router.post('/create-order', auth(ENUM_USER_ROLE.CUSTOMER),OrderController.checkMyAuth);
 
-router.get('/', auth(ENUM_USER_ROLE.ADMIN), OrderController.getAllFromDB);
+router.get('/', auth(ENUM_USER_ROLE.CUSTOMER, ENUM_USER_ROLE.ADMIN),OrderController.getAllFromDB);
+
+
 
 
 export const orderRoutes = router;

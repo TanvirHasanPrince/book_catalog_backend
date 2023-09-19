@@ -43,7 +43,22 @@ const getAllFromDB = async (): Promise<Order[] | null> => {
   return result;
 };
 
+
+// Get all Order for specific Customers → Only Specific Customers
+const getAllOrdersForSpecificCustomerFromDB = async (
+  authUserId: string
+): Promise<Order[] | null> => {
+ const result = await prisma.order.findMany({
+   where: {
+     userId: authUserId,
+   },
+ });
+  return result;
+};
+
+
 export const OrderService = {
   insertIntoDB,
   getAllFromDB,
+  getAllOrdersForSpecificCustomerFromDB,
 };
