@@ -6,74 +6,9 @@
     "auditLog": "D:\\Programming Hero - Level 2\\Assignments\\Assignment 8\\Book Catalog Backend\\book-catalog-backend\\logs\\winston\\errors\\.3d460866b2ccfc9f6e94395cdbf32b4a105342be-audit.json",
     "files": [
         {
-            "date": 1694769209835,
-            "name": "D:\\Programming Hero - Level 2\\Assignments\\Assignment 8\\Book Catalog Backend\\book-catalog-backend\\logs\\winston\\errors\\phu-2023-15-09-15-error.log",
-            "hash": "baf6567ee8ccec6fe97a8e96fad9582eb8565f891fcaf4cad0aa29716917bd4a"
-        },
-        {
-            "date": 1694772087226,
-            "name": "D:\\Programming Hero - Level 2\\Assignments\\Assignment 8\\Book Catalog Backend\\book-catalog-backend\\logs\\winston\\errors\\phu-2023-15-09-16-error.log",
-            "hash": "a7173c01ed2dcfa6cbe797120cd33b187fcc1f0a4889aefef8642c5840434661"
-        },
-        {
-            "date": 1695021327173,
-            "name": "D:\\Programming Hero - Level 2\\Assignments\\Assignment 8\\Book Catalog Backend\\book-catalog-backend\\logs\\winston\\errors\\phu-2023-18-09-13-error.log",
-            "hash": "4388ad727400883d420afff2f928ceb743b29c20ebedd97f80b3e4475ca60cdd"
-        },
-        {
-            "date": 1695024007445,
-            "name": "D:\\Programming Hero - Level 2\\Assignments\\Assignment 8\\Book Catalog Backend\\book-catalog-backend\\logs\\winston\\errors\\phu-2023-18-09-14-error.log",
-            "hash": "eb7921bf21887540c45c7676c7d5b3d336c6348a057954bed5c08ec07c50712a"
-        },
-        {
-            "date": 1695027603113,
-            "name": "D:\\Programming Hero - Level 2\\Assignments\\Assignment 8\\Book Catalog Backend\\book-catalog-backend\\logs\\winston\\errors\\phu-2023-18-09-15-error.log",
-            "hash": "fd499da7eea8b3e65fc3c866efdb0f8451e108d1c73d94f112da2198ceed8adb"
-        },
-        {
-            "date": 1695091748062,
-            "name": "D:\\Programming Hero - Level 2\\Assignments\\Assignment 8\\Book Catalog Backend\\book-catalog-backend\\logs\\winston\\errors\\phu-2023-19-09-08-error.log",
-            "hash": "c74e3601d5fe05e9b47fa6465b3d665b3685605d513143e632aded7e48ac7917"
-        },
-        {
-            "date": 1695092446748,
-            "name": "D:\\Programming Hero - Level 2\\Assignments\\Assignment 8\\Book Catalog Backend\\book-catalog-backend\\logs\\winston\\errors\\phu-2023-19-09-09-error.log",
-            "hash": "ec06d34574a3b2941d8d157c5558bcd18fb068b5c5b546466c417f1af7a400e7"
-        },
-        {
-            "date": 1695096032758,
-            "name": "D:\\Programming Hero - Level 2\\Assignments\\Assignment 8\\Book Catalog Backend\\book-catalog-backend\\logs\\winston\\errors\\phu-2023-19-09-10-error.log",
-            "hash": "2807c7661682d0ca5f6edea372c6edb7abf825ab4687a891e3ce5ee707ceefe2"
-        },
-        {
-            "date": 1695101938184,
-            "name": "D:\\Programming Hero - Level 2\\Assignments\\Assignment 8\\Book Catalog Backend\\book-catalog-backend\\logs\\winston\\errors\\phu-2023-19-09-11-error.log",
-            "hash": "a46df33faba2778d22cd7875d1828d704139c46e18c64d9e358d064117b6bf9f"
-        },
-        {
-            "date": 1695103265297,
-            "name": "D:\\Programming Hero - Level 2\\Assignments\\Assignment 8\\Book Catalog Backend\\book-catalog-backend\\logs\\winston\\errors\\phu-2023-19-09-12-error.log",
-            "hash": "7c8d6741c5e59455f59bdb4be47e75031fd28381681b5989716673f42ff2ea1e"
-        },
-        {
-            "date": 1695108027327,
-            "name": "D:\\Programming Hero - Level 2\\Assignments\\Assignment 8\\Book Catalog Backend\\book-catalog-backend\\logs\\winston\\errors\\phu-2023-19-09-13-error.log",
-            "hash": "03eb58b3cfe02e08cb0e032fdfc2ff7af3d9d6052631ecf4360bc400e43ed92d"
-        },
-        {
-            "date": 1695146846131,
-            "name": "D:\\Programming Hero - Level 2\\Assignments\\Assignment 8\\Book Catalog Backend\\book-catalog-backend\\logs\\winston\\errors\\phu-2023-20-09-00-error.log",
-            "hash": "4139087f83810779c1cf72baceebfee124f62ca0c711f29f126c2381e97e4475"
-        },
-        {
-            "date": 1695150002778,
-            "name": "D:\\Programming Hero - Level 2\\Assignments\\Assignment 8\\Book Catalog Backend\\book-catalog-backend\\logs\\winston\\errors\\phu-2023-20-09-01-error.log",
-            "hash": "67adfcc764da8ee268dde15eae50681d8da044bc19d68bac24bbff43825a055b"
-        },
-        {
-            "date": 1695153635908,
-            "name": "D:\\Programming Hero - Level 2\\Assignments\\Assignment 8\\Book Catalog Backend\\book-catalog-backend\\logs\\winston\\errors\\phu-2023-20-09-02-error.log",
-            "hash": "4be9db2dde4bab701b63d64cef9dff77c350451b5bd4ba9eaebb1bad9b680c3a"
+            "date": 1695158710407,
+            "name": "D:\\Programming Hero - Level 2\\Assignments\\Assignment 8\\Book Catalog Backend\\book-catalog-backend\\logs\\winston\\errors\\phu-2023-20-09-03-error.log",
+            "hash": "eba9e699ad48b8c0683df557edbe3c3e402d46b52dfbedadf344d669b0f41900"
         }
     ],
     "hashType": "sha256"
