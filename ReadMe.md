@@ -153,4 +153,5 @@
   - Endpoint: `api/v1/orders/:orderId` (GET)
 
 #### Test APIs: [You can test out the APIs here](https://book-catalog-backend-tau.vercel.app/)
+#### [API Documentation](https://documenter.getpostman.com/view/28231443/2s9YC8xBvY)
 
