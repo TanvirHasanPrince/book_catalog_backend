@@ -144,7 +144,24 @@ const getByIdFromDB = async (id: string): Promise<Book | null> => {
   return result;
 };
 
+// Update a Single Book → Only Allowed For Admin: Route: /api/v1/books/:id (PATCH)
 
+const updateByIDFromDB = async (
+  id: string,
+  payload: Partial<Book>
+): Promise<Book> => {
+  const result = await prisma.book.update({
+    where: {
+      id,
+    },
+    data: payload,
+    include: {
+      reviewAndRatings: true,
+      orderedBooks: true,
+    },
+  });
+  return result;
+};
 
 
 export const BookService = {
@@ -152,4 +169,5 @@ export const BookService = {
   getAllFromDB,
   getBooksByCategoryIdFromDB,
   getByIdFromDB,
+  updateByIDFromDB,
 };
