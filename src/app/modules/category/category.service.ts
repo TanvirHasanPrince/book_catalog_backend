@@ -34,8 +34,25 @@ const getByIdFromDB = async (id: string): Promise<Category | null> => {
   return result;
 };
 
+const updateByIDFromDB = async (
+  id: string,
+  payload: Partial<Category>
+): Promise<Category> => {
+  const result = await prisma.category.update({
+    where: {
+      id,
+    },
+    data: payload,
+    include: {
+      books: true,
+    },
+  });
+  return result;
+};
+
 export const CategoryService = {
   insertIntoDB,
   getAllFromDB,
   getByIdFromDB,
+  updateByIDFromDB,
 };
