@@ -56,7 +56,7 @@ const getAllFromDB = catchAsync(async (req: Request, res: Response) => {
 const getByIdFromDB = catchAsync(async (req: Request, res: Response) => {
   const user = (req as any).user;
   const { orderId } = req.params;
-    const result = await OrderService.getByIdFromDB(user, orderId);
+  const result = await OrderService.getByIdFromDB(user, orderId);
 
   sendResponse(res, {
     statusCode: httpStatus.OK,
@@ -64,8 +64,6 @@ const getByIdFromDB = catchAsync(async (req: Request, res: Response) => {
     message: 'Order fetched successfully',
     data: result,
   });
-  
-  
 });
 
 export const OrderController = {
