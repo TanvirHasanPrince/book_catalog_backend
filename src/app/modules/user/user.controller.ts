@@ -47,8 +47,23 @@ const updateSingleUserByIDFromDB = catchAsync(
   }
 );
 
+const deleteUserByIDFromDB = catchAsync(
+  async (req: Request, res: Response) => {
+    const { id } = req.params;
+    const result = await UserService.deleteSingleUserByIDFromDB(id);
+    sendResponse(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      message: 'User deleted successfully',
+      data: result,
+    });
+  }
+);
+
+
 export const UserController = {
   getAllFromDB,
   getSingleUserByIDFromDB,
   updateSingleUserByIDFromDB,
+  deleteUserByIDFromDB,
 };

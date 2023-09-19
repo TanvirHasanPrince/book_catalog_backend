@@ -116,9 +116,23 @@ const updateSingleUserByIDFromDB = async (
   return result;
 };
 
+const deleteSingleUserByIDFromDB = async (id: string): Promise<User> => {
+  const result = await prisma.user.delete({
+    where: {
+      id,
+    },
+    include: {
+      reviewAndRatings: true,
+      orders: true,
+    },
+  });
+  return result;
+};
+
 
 export const UserService = {
   getAllFromDB,
   getSingleUserByIDFromDB,
   updateSingleUserByIDFromDB,
+  deleteSingleUserByIDFromDB,
 };
