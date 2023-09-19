@@ -54,9 +54,10 @@ const getAllOrdersForSpecificCustomerFromDB = async (
 
 // Get single order by Id → Only for specific customer and admins
 const getByIdFromDB = async (user: any, orderId: string) => {
-  const isAdmin = (user.role = ENUM_USER_ROLE.ADMIN);
+  console.log(user.role);
 
-  if (isAdmin) {
+
+  if (user.role === ENUM_USER_ROLE.ADMIN) {
     const result = await prisma.order.findUnique({
       where: {
         id: orderId,
@@ -64,7 +65,7 @@ const getByIdFromDB = async (user: any, orderId: string) => {
     });
     return result;
   }
-  if (!isAdmin) {
+  if (user.role === ENUM_USER_ROLE.CUSTOMER) {
     const result = await prisma.order.findUnique({
       where: {
         id: orderId,
