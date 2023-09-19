@@ -1,10 +1,10 @@
 import { Request, Response } from 'express';
 import httpStatus from 'http-status';
 import catchAsync from '../../../shared/catchAsync';
-import sendResponse from '../../../shared/sendResponse';
-import { BookService } from './book.service';
 import pick from '../../../shared/pick';
+import sendResponse from '../../../shared/sendResponse';
 import { bookFilterableFields } from './book.constants';
+import { BookService } from './book.service';
 
 const insertIntoDB = catchAsync(async (req: Request, res: Response) => {
   const result = await BookService.insertIntoDB(req.body);
@@ -18,8 +18,8 @@ const insertIntoDB = catchAsync(async (req: Request, res: Response) => {
 });
 
 const getAllFromDB = catchAsync(async (req: Request, res: Response) => {
-    const filters = pick(req.query, bookFilterableFields);
-      const options = pick(req.query, ['size', 'page', 'sortBy', 'sortOrder']);
+  const filters = pick(req.query, bookFilterableFields);
+  const options = pick(req.query, ['size', 'page', 'sortBy', 'sortOrder']);
 
   const result = await BookService.getAllFromDB(filters, options);
   sendResponse(res, {
@@ -34,7 +34,11 @@ const getAllFromDB = catchAsync(async (req: Request, res: Response) => {
 const getBooksByCategoryIdFromDB = catchAsync(
   async (req: Request, res: Response) => {
     const categoryId = req.params.categoryId;
-    const result = await BookService.getBooksByCategoryIdFromDB(categoryId);
+    const options = pick(req.query, ['size', 'page', 'sortBy', 'sortOrder']);
+    const result = await BookService.getBooksByCategoryIdFromDB(
+      categoryId,
+      options
+    );
 
     sendResponse(res, {
       statusCode: httpStatus.OK,

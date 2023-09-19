@@ -93,17 +93,42 @@ const getAllFromDB = async (
 };
 
 // Get Books By CategoryId
-const getBooksByCategoryIdFromDB = async (id: string): Promise<Book[] | null> => {
+const getBooksByCategoryIdFromDB = async (
+  id: string,
+  options: IPaginationOptions
+): Promise<IGenericResponse<Book[] | null>> => {
+  const { size, page, skip } = paginationHelpers.calculatePagination(options);
+
+  const total = await prisma.book.count({
+    where: {
+      categoryId: id,
+    },
+  });
+
   const result = await prisma.book.findMany({
     where: {
       categoryId: id,
     },
+    skip,
+    take: size,
     include: {
       reviewAndRatings: true,
       orderedBooks: true,
     },
   });
-  return result;
+
+  // Calculate the total number of pages
+  const totalPage = Math.ceil(total / size);
+
+  return {
+    meta: {
+      total,
+      page,
+      size,
+      totalPage,
+    },
+    data: result,
+  };
 };
 
 
