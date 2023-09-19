@@ -131,10 +131,25 @@ const getBooksByCategoryIdFromDB = async (
   };
 };
 
+const getByIdFromDB = async (id: string): Promise<Book | null> => {
+  const result = await prisma.book.findUnique({
+    where: {
+      id,
+    },
+    include: {
+      reviewAndRatings: true,
+      orderedBooks: true,
+    },
+  });
+  return result;
+};
+
+
 
 
 export const BookService = {
   insertIntoDB,
   getAllFromDB,
   getBooksByCategoryIdFromDB,
+  getByIdFromDB,
 };
