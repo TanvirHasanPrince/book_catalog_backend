@@ -1,8 +1,8 @@
 import express from 'express';
 import { ENUM_USER_ROLE } from '../../../enums/user';
 import auth from '../../middlewares/auth';
-import { BookController } from './book.controller';
 import validateRequest from '../../middlewares/validateRequest';
+import { BookController } from './book.controller';
 import { BookValidation } from './book.validations';
 
 const router = express.Router();
@@ -20,12 +20,13 @@ router.patch(
 );
 router.get('/', BookController.getAllFromDB);
 router.get('/:id', BookController.getByIdFromDB);
+
 router.get('/:categoryId/category', BookController.getBooksByCategoryIdFromDB);
 
-
-
-
+router.delete(
+  '/:id',
+  auth(ENUM_USER_ROLE.ADMIN),
+  BookController.deleteByIDFromDB
+);
 
 export const bookRoutes = router;
-
-
