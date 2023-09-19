@@ -35,6 +35,15 @@ const insertIntoDB = async (
   return order;
 };
 
+// Get all Order → Only Allowed For Admins
+const getAllFromDB = async (): Promise<Order[] | null> => {
+  const result = await prisma.order.findMany(
+{});
+
+  return result;
+};
+
 export const OrderService = {
   insertIntoDB,
+  getAllFromDB,
 };
